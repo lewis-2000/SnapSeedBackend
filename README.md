@@ -21,11 +21,11 @@ backend/ │── database.py # Database models & setup │── main.py # Fas
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/yourusername/exam-bank-backend.git
+git clone https://github.com/lewis-2000/SnapSeedBackend.git
 cd exam-bank-backend
 ```
 
-### 2️⃣ Clone the Repository
+### 2️⃣ Activate and use Venv
 ```sh
 python -m venv venv
 source venv/bin/activate  # On macOS/Linux
