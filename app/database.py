@@ -25,7 +25,6 @@ class Exam(Base):
     title = Column(String, nullable=False)
     question_ids = Column(JSON, nullable=False)  # Stores list of question IDs
 
-
 # Marking Scheme model
 class MarkingScheme(Base):
     __tablename__ = "marking_schemes"
@@ -37,3 +36,11 @@ class MarkingScheme(Base):
 
 # Create tables
 Base.metadata.create_all(bind=engine)
+
+# Dependency to get a database session
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
